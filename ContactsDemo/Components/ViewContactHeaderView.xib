@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ViewContactHeaderView" customModule="ContactsDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="341" height="296"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YGZ-uM-0qT" customClass="RUIWhiteGreenGradientView" customModule="ContactsDemo" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="341" height="296"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ggU-Us-1As" customClass="CDImageTitleView" customModule="ContactsDemo" customModuleProvider="target">
+                            <rect key="frame" x="70.5" y="30" width="200" height="166"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="fiB-hb-jke"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="image" keyPath="img" value="camera_button"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Polly Richardson"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="PW9-Zw-DjW">
+                            <rect key="frame" x="20" y="204" width="301" height="80"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="exW-KK-8a5" customClass="CDImageTitleView" customModule="ContactsDemo" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="75.5" height="80"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="img" value="message_button"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="message"/>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="message_button"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tvn-n5-3q4" customClass="CDImageTitleView" customModule="ContactsDemo" customModuleProvider="target">
+                                    <rect key="frame" x="75.5" y="0.0" width="75" height="80"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="img" value="call_button"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="call"/>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="call_button"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Srg-5X-Qbn" customClass="CDImageTitleView" customModule="ContactsDemo" customModuleProvider="target">
+                                    <rect key="frame" x="150.5" y="0.0" width="75.5" height="80"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="img" value="email_button"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="email"/>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="email_button"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="snJ-ke-IVY" customClass="CDImageTitleView" customModule="ContactsDemo" customModuleProvider="target">
+                                    <rect key="frame" x="226" y="0.0" width="75" height="80"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="img" value="favourite_button"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="favourite"/>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="favourite_button"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="80" id="OPG-60-6WT"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="PW9-Zw-DjW" firstAttribute="top" secondItem="ggU-Us-1As" secondAttribute="bottom" constant="8" id="06s-6t-3dn"/>
+                        <constraint firstItem="PW9-Zw-DjW" firstAttribute="leading" secondItem="YGZ-uM-0qT" secondAttribute="leading" constant="20" id="957-c7-yNV"/>
+                        <constraint firstAttribute="bottom" secondItem="PW9-Zw-DjW" secondAttribute="bottom" constant="12" id="Rhq-pd-mN8"/>
+                        <constraint firstItem="ggU-Us-1As" firstAttribute="top" secondItem="YGZ-uM-0qT" secondAttribute="top" constant="30" id="SvK-Jm-USK"/>
+                        <constraint firstItem="ggU-Us-1As" firstAttribute="centerX" secondItem="YGZ-uM-0qT" secondAttribute="centerX" id="gev-TY-asw"/>
+                        <constraint firstAttribute="trailing" secondItem="PW9-Zw-DjW" secondAttribute="trailing" constant="20" id="uk7-JR-1kg"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="YGZ-uM-0qT" secondAttribute="trailing" id="5L4-iH-utT"/>
+                <constraint firstItem="YGZ-uM-0qT" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="93j-oQ-dea"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="YGZ-uM-0qT" secondAttribute="bottom" id="FFC-51-0q7"/>
+                <constraint firstItem="YGZ-uM-0qT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="QhS-yZ-oag"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="callView" destination="Tvn-n5-3q4" id="aVg-Ce-nlh"/>
+                <outlet property="emailView" destination="Srg-5X-Qbn" id="11P-a9-kqx"/>
+                <outlet property="favouriteView" destination="snJ-ke-IVY" id="Y7k-iv-hbu"/>
+                <outlet property="msgView" destination="exW-KK-8a5" id="tov-bA-BZN"/>
+                <outlet property="profileView" destination="ggU-Us-1As" id="IZ0-B0-5XS"/>
+            </connections>
+            <point key="canvasLocation" x="112.8" y="-12.593703148425789"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="call_button" width="45" height="44"/>
+        <image name="camera_button" width="41" height="41"/>
+        <image name="email_button" width="45" height="44"/>
+        <image name="favourite_button" width="44" height="44"/>
+        <image name="message_button" width="44" height="44"/>
+    </resources>
+</document>

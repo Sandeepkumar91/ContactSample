@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="AddContactHeaderView" customModule="ContactsDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="309" height="269"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lyV-Oe-FEt" customClass="RUIWhiteGreenGradientView" customModule="ContactsDemo" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="309" height="269"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder_photo" translatesAutoresizingMaskIntoConstraints="NO" id="Gi2-iI-clM" customClass="RUINetworkImageView" customModule="ContactsDemo" customModuleProvider="target">
+                            <rect key="frame" x="79.5" y="59.5" width="150" height="150"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="150" id="Spb-uv-gyH"/>
+                                <constraint firstAttribute="height" constant="150" id="kdY-zt-rYJ"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="borderColor" value="AppWhite"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="borderWidth" value="3"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="100"/>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera_button" translatesAutoresizingMaskIntoConstraints="NO" id="3nV-v1-q0W" customClass="RUIBorderedClickableImageView" customModule="ContactsDemo" customModuleProvider="target">
+                            <rect key="frame" x="179.5" y="159.5" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="3cB-KC-6HU"/>
+                                <constraint firstAttribute="width" constant="50" id="Zqw-be-zu6"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="25"/>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Gi2-iI-clM" firstAttribute="centerY" secondItem="lyV-Oe-FEt" secondAttribute="centerY" id="Ssa-d3-6wl"/>
+                        <constraint firstItem="Gi2-iI-clM" firstAttribute="centerX" secondItem="lyV-Oe-FEt" secondAttribute="centerX" id="TFL-7O-VLt"/>
+                        <constraint firstItem="3nV-v1-q0W" firstAttribute="trailing" secondItem="Gi2-iI-clM" secondAttribute="trailing" id="Ynz-qa-LvE"/>
+                        <constraint firstItem="3nV-v1-q0W" firstAttribute="bottom" secondItem="Gi2-iI-clM" secondAttribute="bottom" id="aEr-xx-CYq"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="lyV-Oe-FEt" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="AnY-rF-8pF"/>
+                <constraint firstItem="lyV-Oe-FEt" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="QjQ-5A-1I6"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="lyV-Oe-FEt" secondAttribute="trailing" id="t3B-lE-0RM"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="lyV-Oe-FEt" secondAttribute="bottom" id="uEB-EG-bwr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="cameraActionButton" destination="3nV-v1-q0W" id="oVf-ph-jGT"/>
+                <outlet property="profileImgView" destination="Gi2-iI-clM" id="dCK-h0-cVg"/>
+            </connections>
+            <point key="canvasLocation" x="85.599999999999994" y="-24.7376311844078"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="camera_button" width="41" height="41"/>
+        <image name="placeholder_photo" width="126" height="126"/>
+    </resources>
+</document>

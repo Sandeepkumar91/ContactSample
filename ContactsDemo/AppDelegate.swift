@@ -16,6 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        UINavigationBar.appearance().tintColor = UIColor.CDGreen
+        UINavigationBar.appearance().backgroundColor = UIColor.clear
+        
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().isTranslucent = true
+        
+        let navController = UINavigationController.init(rootViewController: ContactsTableViewController.init())
+        self.window?.rootViewController = navController
         return true
     }
 

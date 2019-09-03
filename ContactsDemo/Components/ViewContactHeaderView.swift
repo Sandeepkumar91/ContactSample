@@ -25,6 +25,8 @@ class ViewContactHeaderView: UIView {
         }
     }
     
+    var didClickedOnContactOptions: ((Int) -> ())?
+    
     static func instanceFromNib() -> UIView {
         return UINib(nibName: String(describing: ViewContactHeaderView.self), bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
     }
@@ -32,21 +34,31 @@ class ViewContactHeaderView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         msgView.didClickedCallBack = {
+            if let block = self.self.didClickedOnContactOptions {
+                block(0)
+            }
             let urlString = "sms:+12345678901"
             UIApplication.shared.openURL(URL(string: urlString)!)
         }
         
         callView.didClickedCallBack = {
+            if let block = self.didClickedOnContactOptions {
+                block(1)
+            }
             let urlString = "tel://8197097703"
             UIApplication.shared.openURL(URL(string: urlString)!)
         }
         
         emailView.didClickedCallBack = {
-            
+            if let block = self.didClickedOnContactOptions {
+                block(2)
+            }
         }
         
         favouriteView.didClickedCallBack = {
-            
+            if let block = self.didClickedOnContactOptions {
+                block(3)
+            }
         }
     }
 }

@@ -80,6 +80,21 @@ class ViewContactTableViewController: UITableViewController {
 extension ViewContactTableViewController {
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView: ViewContactHeaderView = (ViewContactHeaderView.instanceFromNib() as? ViewContactHeaderView)!
+        headerView.didClickedOnContactOptions = { optionIndex in
+            switch optionIndex {
+            case 0:
+                self.sendSMS()
+            case 1:
+                let urlString = "tel://8197097703"
+                UIApplication.shared.open(URL.init(string: urlString)!, options: [:], completionHandler: nil)
+            case 2:
+                self.sendEmail()
+            case 3:
+                break
+            default:
+                break
+            }
+        }
         headerView.contact = contact
         return headerView
     }
